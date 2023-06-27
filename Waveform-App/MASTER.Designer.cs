@@ -72,6 +72,7 @@
             ConnectButton.TabIndex = 2;
             ConnectButton.Text = "Connect";
             ConnectButton.UseVisualStyleBackColor = false;
+            ConnectButton.Click += ConnectButton_Click;
             // 
             // GenerateButton
             // 
@@ -95,7 +96,7 @@
             WaveTypeComboBox.Size = new Size(121, 23);
             WaveTypeComboBox.TabIndex = 4;
             // 
-            // Form1
+            // MASTER
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -105,8 +106,9 @@
             Controls.Add(ConnectButton);
             Controls.Add(ConnectedLabel);
             Controls.Add(formsPlot1);
-            Name = "Form1";
+            Name = "MASTER";
             Text = "Wave Form Listener";
+            FormClosing += MASTER_FormClosing;
             ResumeLayout(false);
             PerformLayout();
         }
